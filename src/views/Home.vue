@@ -1,12 +1,17 @@
 <template>
   <div class="home">
-    <h1 class="main-title">TAKE A BREATH</h1>
-    <router-link class="btn" :to="{ name: 'select-symptoms'}">Começar</router-link>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+
 export default {
-  name: "home"
-};
+  name: 'home',
+  components: {
+    HelloWorld
+  }
+}
 </script>
