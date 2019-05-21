@@ -27,25 +27,19 @@ export default {
   },
   created() {
     this.index = this.$route.params.id;
-    // if (this.index === "1") {
-    //   this.show = true;
-    // }
+    if (this.index === "1") {
+      this.show = true;
+    }
   },
   methods: {
     nextPage() {
-      // if (this.index === "0") {
-      //   this.$router.push({ name: "animation", params: { id: "1" } });
-      // }
-      // if (this.index === "1") {
-      //   this.$router.push({ name: "last-page" });
-      // }
-      this.$router.push({ name: "last-page" });
+      if (this.index === "0") {
+        this.$router.push({ name: "animation", params: { id: "1" } });
+      }
+      if (this.index === "1") {
+        this.$router.push({ name: "last-page" });
+      }
     }
   }
-  // watch: {
-  //   index: () => {
-  //     console.log("Hello");
-  //   }
-  // }
 };
 </script>
