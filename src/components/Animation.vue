@@ -1,6 +1,6 @@
 <template>
   <div class="animation">
-    <img loop="infinite" src="/images/animacao1.gif">
+    <img loop="infinite" dynsrc="/images/animacao1.gif" src="/images/animacao1.gif">
   </div>
 </template>
 
