@@ -16,6 +16,9 @@ export default {
       if (this.section === "symptoms") {
         this.$router.push({ name: "places" });
       }
+      if (this.section === "places") {
+        this.$router.push({ name: "animation", params: { id: 0 } });
+      }
     }
   }
 };

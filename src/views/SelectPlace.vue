@@ -1,5 +1,5 @@
 <template>
-  <div class="select select--symptoms">
+  <div class="select select--places">
     <h1 class="select__title">Onde te encontras?</h1>
     <btn-list v-bind:btns="this.symptoms" v-bind:section="section"/>
   </div>
