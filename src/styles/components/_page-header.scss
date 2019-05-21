@@ -1,0 +1,65 @@
+.header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  i {
+    padding: 24px;
+    color: $base-color;
+  }
+}
+
+.navbar__btn {
+  padding: 16px;
+  font-size: $navbar__btn-font-size;
+  font-weight: 700;
+}
+.help {
+  position: absolute;
+  top: 160px;
+  width: 800px;
+  height: 500px;
+  padding: 8px;
+  border: 5px solid $primary-color;
+  background-color: $base-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  grid-gap: 8px;
+  background-image: url("/images/testesdecor_Prancheta 1 cópia 2.png");
+  background-position: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  i {
+    padding: 8px;
+  }
+}
+
+.help__title {
+  grid-column: 1 / 3;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $help__title-font-size;
+  font-weight: 700;
+}
+
+.help__text {
+  margin: 0;
+  font-weight: 300;
+  padding: 8px;
+}
