@@ -26,9 +26,33 @@ export default new Vuex.Store({
         name: "Outro",
         selected: false
       }
-    ]
+    ],
+    places: [
+      {
+        index: 0,
+        name: "Interior",
+        selected: false
+      },
+      {
+        index: 1,
+        name: "Exterior",
+        selected: false
+      }
+    ],
+    section: ""
   },
-  mutations: {},
+  getters: {},
+  mutations: {
+    setSection(state, payload) {
+      state.section = payload;
+    },
+    selectSymptom(state, index) {
+      state.symptoms[index].selected = true;
+    },
+    selectPlace(state, index) {
+      state.places[index].selected = true;
+    }
+  },
   actions: {},
   modules: {}
 });
