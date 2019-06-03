@@ -1,7 +1,7 @@
 <template>
   <div class="select select--symptoms">
     <h1 class="select__title">O que te levou a utilizar o nosso site?</h1>
-    <btn-list v-bind:btns="this.symptoms" v-bind:section="section"/>
+    <btn-list v-bind:btns="symptoms" v-bind:section="section"/>
   </div>
 </template>
 
@@ -15,10 +15,7 @@ export default {
   },
   computed: mapState(["symptoms", "section"]),
   methods: {
-    ...mapMutations(["setSection"]),
-    nextPage() {
-      this.$route.push({ name: "select" });
-    }
+    ...mapMutations(["setSection"])
   },
   created() {
     this.setSection(this.$route.name);

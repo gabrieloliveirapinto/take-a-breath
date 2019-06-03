@@ -1,16 +1,17 @@
 <template>
-  <div class="main-page" v-bind:class="{'fill': fill}">
-    <animation v-bind:index="index" v-bind:show="show"/>
+  <!-- todo: bind css class with background color -- add to animations in store -->
+  <div class="main-page">
+    <animation v-bind:anim="anim"/>
     <div class="description">
-      <p class="description__text">{{description}}</p>
+      <p class="description__text">{{desc}}</p>
     </div>
     <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
   </div>
 </template>
 
 <script>
-// import { mapState } from "vuex";
 import Animation from "@/components/Animation";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   components: {
@@ -18,27 +19,33 @@ export default {
   },
   data() {
     return {
-      index: "0",
-      fill: true,
-      show: false,
-      description:
-        "À medida que o cilindro é aperfeiçoado e o anel desce, deve chegar, lentamente e com o mesmo ritmo, à ponta dos pés com as suas mãos."
+      aninIndex: 0,
+      anim: "",
+      desc: ""
     };
   },
+  computed: {
+    ...mapState(["animations", "selectedAnimations"])
+  },
   created() {
-    this.index = this.$route.params.id;
-    if (this.index === "1") {
-      this.show = true;
-      this.description =
-        "Inspire sempre que a bola chega ao canto esquerdo. Expire quando a bola chegar ao canto direito.";
-    }
+    this.gameAnimations();
+    this.getCurrentAnimation();
   },
   methods: {
+    ...mapMutations(["gameAnimations"]),
+    getCurrentAnimation() {
+      this.anim = this.animations[
+        this.selectedAnimations[this.aninIndex]
+      ].animation;
+      this.desc = this.animations[
+        this.selectedAnimations[this.aninIndex]
+      ].description;
+    },
     nextPage() {
-      if (this.index === "0") {
-        this.$router.push({ name: "animation", params: { id: "1" } });
-      }
-      if (this.index === "1") {
+      if (this.aninIndex < 2) {
+        this.aninIndex++;
+        this.getCurrentAnimation();
+      } else {
         this.$router.push({ name: "last-page" });
       }
     }

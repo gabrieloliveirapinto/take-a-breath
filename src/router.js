@@ -32,7 +32,7 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/SelectPlace.vue")
     },
     {
-      path: "/animation/:id",
+      path: "/animation",
       name: "animation",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

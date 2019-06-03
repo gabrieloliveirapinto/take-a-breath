@@ -1,10 +1,16 @@
 <template>
   <div class="btn-list">
-    <div class="btn" v-for="btn in btns" v-bind:key="btn.index" @click="nextPage()">{{btn.name}}</div>
+    <div
+      class="btn"
+      v-for="btn in btns"
+      v-bind:key="btn.index"
+      @click="nextPage(btn.index)"
+    >{{btn.name}}</div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "BtnList",
   props: {
@@ -12,8 +18,10 @@ export default {
     section: String
   },
   methods: {
-    nextPage() {
+    ...mapMutations(["selectPlace"]),
+    nextPage(index) {
       if (this.section === "symptoms") {
+        this.selectPlace(index);
         this.$router.push({ name: "places" });
       }
       if (this.section === "places") {
