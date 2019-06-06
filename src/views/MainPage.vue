@@ -1,12 +1,13 @@
 <template>
-  <!-- todo: bind css class with background color -- add to animations in store -->
+  <!-- TODO: bind css class with background color -- add to animations in store -->
   <div class="main-page">
     <animation v-bind:anim="anim"/>
+    <!-- TODO: add class to position description -- get from state anumations -->
     <div class="description">
       <p class="description__text">{{desc}}</p>
     </div>
-    <!-- <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i> -->
-    <div class="animation-arrow" @click="nextPage()">Anvançar</div>
+    <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
+    <!-- <div class="animation-arrow" @click="nextPage()">Anvançar</div> -->
   </div>
 </template>
 
@@ -30,7 +31,6 @@ export default {
   },
   created() {
     this.gameAnimations();
-    console.log(`Selected animations:`, this.animations);
     this.getCurrentAnimation();
   },
   methods: {

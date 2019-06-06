@@ -15,7 +15,6 @@ export default {
   methods: {
     ...mapMutations(["reset"]),
     goHome() {
-      console.log("Going Home....");
       this.reset();
       this.$router.push({ name: "home" });
     }

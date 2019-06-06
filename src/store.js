@@ -93,7 +93,6 @@ export default new Vuex.Store({
       )[0].animations;
     },
     reset(state) {
-      console.log("Resetting infos");
       state.places.forEach(place => (place.selected = false));
       state.symptoms.forEach(symptom => (symptom.selected = false));
     }
