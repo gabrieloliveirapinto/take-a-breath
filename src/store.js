@@ -53,9 +53,24 @@ export default new Vuex.Store({
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>"
       },
       {
-        description: "Animation 1 description",
+        description: "Animation 3 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>"
+      },
+      {
+        description: "Animation 4 description",
+        animation:
+          "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>"
+      },
+      {
+        description: "Animation 5 description",
+        animation:
+          "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>"
+      },
+      {
+        description: "Animation 6 description",
+        animation:
+          "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>"
       }
     ],
     selectedAnimations: [],
@@ -76,8 +91,12 @@ export default new Vuex.Store({
       state.selectedAnimations = state.places.filter(
         place => place.selected === true
       )[0].animations;
+    },
+    reset(state) {
+      console.log("Resetting infos");
+      state.places.forEach(place => (place.selected = false));
+      state.symptoms.forEach(symptom => (symptom.selected = false));
     }
-    // TODO: reset aos symptoms e places
   },
   actions: {},
   modules: {}

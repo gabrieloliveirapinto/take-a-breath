@@ -18,14 +18,15 @@ export default {
     section: String
   },
   methods: {
-    ...mapMutations(["selectPlace"]),
+    ...mapMutations(["selectPlace", "selectSymptom"]),
     nextPage(index) {
       if (this.section === "symptoms") {
-        this.selectPlace(index);
+        this.selectSymptom(index);
         this.$router.push({ name: "places" });
       }
       if (this.section === "places") {
-        this.$router.push({ name: "animation", params: { id: 0 } });
+        this.selectPlace(index);
+        this.$router.push({ name: "animation" });
       }
     }
   }

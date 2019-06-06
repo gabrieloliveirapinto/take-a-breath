@@ -5,7 +5,8 @@
     <div class="description">
       <p class="description__text">{{desc}}</p>
     </div>
-    <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
+    <!-- <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i> -->
+    <div class="animation-arrow" @click="nextPage()">Anvançar</div>
   </div>
 </template>
 
@@ -29,6 +30,7 @@ export default {
   },
   created() {
     this.gameAnimations();
+    console.log(`Selected animations:`, this.animations);
     this.getCurrentAnimation();
   },
   methods: {

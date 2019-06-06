@@ -4,11 +4,21 @@
     <p class="last-page__subtitle">Esperamos que te estejas a sentir melhor!</p>
     <div class="btn--line">
       <router-link class="btn" :to="{name: 'animation'}">Jogar Novamente</router-link>
-      <router-link class="btn" :to="{name: 'home'}">Página Inicial</router-link>
+      <div class="btn" @click="goHome()">Página Inicial</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapMutations } from "vuex";
+export default {
+  methods: {
+    ...mapMutations(["reset"]),
+    goHome() {
+      console.log("Going Home....");
+      this.reset();
+      this.$router.push({ name: "home" });
+    }
+  }
+};
 </script>
