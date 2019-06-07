@@ -74,18 +74,20 @@ export default new Vuex.Store({
       }
     ],
     selectedAnimations: [],
-    section: "",
-    audio: null
+    section: ""
+    // audio: null
   },
   getters: {},
   mutations: {
     setSection(state, payload) {
       state.section = payload;
     },
-    setSound(state, payload) {
-      state.sound = new Audio(payload);
-      state.sound.play();
-    },
+    // setSound(state, payload) {
+    //   console.log("Setting sound");
+    //   state.sound = new Audio(payload);
+    //   state.sound.loop = true;
+    //   // state.sound.play();
+    // },
     selectSymptom(state, index) {
       state.symptoms[index].selected = true;
     },
@@ -97,17 +99,17 @@ export default new Vuex.Store({
         place => place.selected === true
       )[0].animations;
     },
-    playSound(state, soundON) {
-      if (soundON) {
-        state.audio.play();
-      } else {
-        state.audio.pause();
-      }
-    },
+    // playSound(state, soundON) {
+    //   if (soundON) {
+    //     state.audio.play();
+    //   } else {
+    //     state.audio.pause();
+    //   }
+    // },
     reset(state) {
       state.places.forEach(place => (place.selected = false));
       state.symptoms.forEach(symptom => (symptom.selected = false));
-      state.audio = false;
+      // state.audio = false;
     }
   },
   actions: {},

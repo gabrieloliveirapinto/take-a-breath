@@ -35,30 +35,44 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+// import { mapState, mapMutations } from "vuex";
 export default {
   name: "PageHeader",
   data() {
     return {
       soundON: false,
-      hideHelp: true
+      hideHelp: true,
+      audio: null,
+      sound: ""
     };
   },
-  computed: {
-    ...mapState(["audio"])
-  },
+  // computed: {
+  // ...mapState(["audio"])
+  // },
   created() {
-    let sound1 = "./sounds/out-sound-1.mp3";
-    this.setSound(sound1);
+    this.sound = "./sounds/out-sound-1.mp3";
+    this.startAudio();
+    this.palyButton();
   },
   methods: {
-    ...mapMutations(["setSound", "playSound"]),
+    // ...mapMutations(["setSound", "playSound"]),
     toggleSound() {
       this.soundON = !this.soundON;
-      this.playSound(this.soundON);
+      this.palyButton();
     },
     toggleHelp() {
       this.hideHelp = !this.hideHelp;
+    },
+    startAudio() {
+      this.audio = new Audio(this.sound);
+      this.audio.loop = true;
+    },
+    palyButton() {
+      if (this.soundON) {
+        this.audio.pause();
+      } else {
+        this.audio.play();
+      }
     }
   }
 };
