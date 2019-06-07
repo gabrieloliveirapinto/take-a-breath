@@ -35,7 +35,7 @@
 </template>
 
 <script>
-// import { mapState, mapMutations } from "vuex";
+import { setInterval } from "timers";
 export default {
   name: "PageHeader",
   data() {
@@ -46,19 +46,15 @@ export default {
       sound: ""
     };
   },
-  // computed: {
-  // ...mapState(["audio"])
-  // },
   created() {
     this.sound = "./sounds/out-sound-1.mp3";
     this.startAudio();
-    this.palyButton();
+    setInterval(() => this.playButton(), 500);
   },
   methods: {
-    // ...mapMutations(["setSound", "playSound"]),
     toggleSound() {
       this.soundON = !this.soundON;
-      this.palyButton();
+      this.playButton();
     },
     toggleHelp() {
       this.hideHelp = !this.hideHelp;
@@ -66,8 +62,10 @@ export default {
     startAudio() {
       this.audio = new Audio(this.sound);
       this.audio.loop = true;
+      this.audio.preload = "auto";
+      this.audio.load();
     },
-    palyButton() {
+    playButton() {
       if (this.soundON) {
         this.audio.pause();
       } else {
