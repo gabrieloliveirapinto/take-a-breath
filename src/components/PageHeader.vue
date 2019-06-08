@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <div class="navbar">
-      <i class="fas fa-volume-up fa-3x" v-bind:class="{'hide': soundON}" @click="toggleSound()"></i>
-      <i class="fas fa-volume-mute fa-3x" v-bind:class="{'hide': !soundON}" @click="toggleSound()"></i>
+      <i class="fas fa-volume-up fa-3x" v-bind:class="{'hide': !soundON}" @click="toggleSound()"></i>
+      <i class="fas fa-volume-mute fa-3x" v-bind:class="{'hide': soundON}" @click="toggleSound()"></i>
       <i
         class="far fa-question-circle fa-3x"
         v-bind:class="{'hide': !hideHelp}"
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import { setInterval } from "timers";
 export default {
   name: "PageHeader",
   data() {
@@ -49,7 +48,6 @@ export default {
   created() {
     this.sound = "./sounds/out-sound-1.mp3";
     this.startAudio();
-    setInterval(() => this.playButton(), 500);
   },
   methods: {
     toggleSound() {
@@ -66,7 +64,7 @@ export default {
       this.audio.load();
     },
     playButton() {
-      if (this.soundON) {
+      if (!this.soundON) {
         this.audio.pause();
       } else {
         this.audio.play();
@@ -75,21 +73,3 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
