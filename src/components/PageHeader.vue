@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "PageHeader",
   data() {
@@ -45,8 +46,8 @@ export default {
       sound: ""
     };
   },
+  computed: mapState(["currentSound"]),
   created() {
-    this.sound = "./sounds/out-sound-1.mp3";
     this.startAudio();
   },
   methods: {
@@ -58,6 +59,7 @@ export default {
       this.hideHelp = !this.hideHelp;
     },
     startAudio() {
+      this.sound = this.currentSound;
       this.audio = new Audio(this.sound);
       this.audio.loop = true;
       this.audio.preload = "auto";
@@ -69,7 +71,19 @@ export default {
       } else {
         this.audio.play();
       }
+    },
+    changeSound() {
+      this.audio.pause();
+      this.sound = this.currentSound;
+      this.audio = new Audio(this.sound);
+      this.audio.loop = true;
+      this.audio.preload = "auto";
+      this.audio.load();
+      this.audio.play();
     }
+  },
+  watch: {
+    currentSound: "changeSound"
   }
 };
 </script>

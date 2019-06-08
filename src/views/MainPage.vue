@@ -7,7 +7,6 @@
       <p class="description__text">{{desc}}</p>
     </div>
     <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
-    <!-- <div class="animation-arrow" @click="nextPage()">Anvançar</div> -->
   </div>
 </template>
 
@@ -34,7 +33,7 @@ export default {
     this.getCurrentAnimation();
   },
   methods: {
-    ...mapMutations(["gameAnimations"]),
+    ...mapMutations(["gameAnimations", "setCurrentSound"]),
     getCurrentAnimation() {
       this.anim = this.animations[
         this.selectedAnimations[this.aninIndex]
@@ -42,6 +41,9 @@ export default {
       this.desc = this.animations[
         this.selectedAnimations[this.aninIndex]
       ].description;
+      this.setCurrentSound(
+        this.animations[this.selectedAnimations[this.aninIndex]].sound
+      );
     },
     nextPage() {
       if (this.aninIndex < 2) {
