@@ -46,6 +46,7 @@ export default new Vuex.Store({
         description: "Animation 1 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+        sound: "./sounds/out-sound-1.mp3",
         backgroundClass: { "background-color-1": true },
         descriptionClass: { "description-pos-1": true }
       },
@@ -53,6 +54,7 @@ export default new Vuex.Store({
         description: "Animation 2 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+        sound: "./sounds/out-sound-2.mp3",
         backgroundClass: { "background-color-2": true },
         descriptionClass: { "description-pos-2": true }
       },
@@ -60,6 +62,7 @@ export default new Vuex.Store({
         description: "Animation 3 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+        sound: "./sounds/out-sound-3.mp3",
         backgroundClass: { "background-color-3": true },
         descriptionClass: { "description-pos-3": true }
       },
@@ -67,6 +70,7 @@ export default new Vuex.Store({
         description: "Animation 4 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+        sound: "./sounds/in-sound-1.mp3",
         backgroundClass: { "background-color-4": true },
         descriptionClass: { "description-pos-4": true }
       },
@@ -74,6 +78,7 @@ export default new Vuex.Store({
         description: "Animation 5 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+        sound: "./sounds/in-sound-2.mp3",
         backgroundClass: { "background-color-5": true },
         descriptionClass: { "description-pos-5": true }
       },
@@ -81,6 +86,7 @@ export default new Vuex.Store({
         description: "Animation 6 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+        sound: "./sounds/in-sound-3.mp3",
         backgroundClass: { "background-color-6": true },
         descriptionClass: { "description-pos-6": true }
       }
