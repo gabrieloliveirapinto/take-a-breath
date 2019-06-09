@@ -43,6 +43,11 @@
   z-index: 9998;
   top: 50%;
   right: 160px;
-  // color: $base-color;
   color: $primary-color;
+}
+
+@for $i from 1 to 6 {
+  .background-color-#{$i} {
+    @include backgroundColor($i);
+  }
 }

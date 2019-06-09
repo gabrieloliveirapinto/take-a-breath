@@ -46,37 +46,37 @@ export default new Vuex.Store({
         description: "Animation 1 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        sound: "./sounds/out-sound-1.mp3"
+        class: { "background-color-1": true }
       },
       {
         description: "Animation 2 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        sound: "./sounds/out-sound-2.mp3"
+        class: { "background-color-2": true }
       },
       {
         description: "Animation 3 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        sound: "./sounds/out-sound-3.mp3"
+        class: { "background-color-3": true }
       },
       {
         description: "Animation 4 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        sound: "./sounds/in-sound-1.mp3"
+        class: { "background-color-4": true }
       },
       {
         description: "Animation 5 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        sound: "./sounds/in-sound-2.mp3"
+        class: { "background-color-5": true }
       },
       {
         description: "Animation 6 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        sound: "./sounds/in-sound-3.mp3"
+        class: { "background-color-6": true }
       }
     ],
     selectedAnimations: [],

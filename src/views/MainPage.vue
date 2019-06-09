@@ -1,6 +1,6 @@
 <template>
   <!-- TODO: bind css class with background color -- add to animations in store -->
-  <div class="main-page">
+  <div class="main-page" v-bind:class="this.class">
     <animation v-bind:anim="anim"/>
     <!-- TODO: add class to position description -- get from state anumations -->
     <div class="description">
@@ -22,7 +22,8 @@ export default {
     return {
       aninIndex: 0,
       anim: "",
-      desc: ""
+      desc: "",
+      class: {}
     };
   },
   computed: {
@@ -41,6 +42,9 @@ export default {
       this.desc = this.animations[
         this.selectedAnimations[this.aninIndex]
       ].description;
+      this.class = this.animations[
+        this.selectedAnimations[this.aninIndex]
+      ].class;
       this.setCurrentSound(
         this.animations[this.selectedAnimations[this.aninIndex]].sound
       );
