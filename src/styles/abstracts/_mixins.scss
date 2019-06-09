@@ -18,3 +18,30 @@
     background-color: pink;
   }
 }
+
+@mixin descriptionPos($num) {
+  @if $num == 1 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+  @if $num == 2 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+  @if $num == 3 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+  @if $num == 4 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+  @if $num == 5 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+  @if $num == 6 {
+    top: $num * 10px;
+    left: $num * 10px;
+  }
+}

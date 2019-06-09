@@ -1,9 +1,9 @@
 <template>
   <!-- TODO: bind css class with background color -- add to animations in store -->
-  <div class="main-page" v-bind:class="this.class">
+  <div class="main-page" v-bind:class="this.animClass">
     <animation v-bind:anim="anim"/>
     <!-- TODO: add class to position description -- get from state anumations -->
-    <div class="description">
+    <div v-bind:class="this.desClass">
       <p class="description__text">{{desc}}</p>
     </div>
     <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
@@ -23,7 +23,8 @@ export default {
       aninIndex: 0,
       anim: "",
       desc: "",
-      class: {}
+      animClass: {},
+      desClass: {}
     };
   },
   computed: {
@@ -42,9 +43,12 @@ export default {
       this.desc = this.animations[
         this.selectedAnimations[this.aninIndex]
       ].description;
-      this.class = this.animations[
+      this.animClass = this.animations[
         this.selectedAnimations[this.aninIndex]
-      ].class;
+      ].backgroundClass;
+      this.desClass = this.animations[
+        this.selectedAnimations[this.aninIndex]
+      ].descriptionClass;
       this.setCurrentSound(
         this.animations[this.selectedAnimations[this.aninIndex]].sound
       );

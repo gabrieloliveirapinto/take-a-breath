@@ -25,19 +25,6 @@
   background-color: #f198c0;
 }
 
-.description {
-  position: absolute;
-  z-index: 9998;
-  top: 160px;
-  left: 100px;
-  border: 5px solid $primary-color;
-  padding: 16px;
-  width: 240px;
-  text-align: center;
-  border-radius: 20px;
-  background-color: $base-color;
-}
-
 .animation-arrow {
   position: absolute;
   z-index: 9998;
@@ -46,8 +33,18 @@
   color: $primary-color;
 }
 
-@for $i from 1 to 6 {
+@for $i from 1 to 7 {
   .background-color-#{$i} {
     @include backgroundColor($i);
+  }
+}
+
+@for $i from 1 to 7 {
+  .description-pos-#{$i} {
+    position: absolute;
+    z-index: 9998;
+    padding: 16px;
+    width: 240px;
+    @include descriptionPos($i);
   }
 }

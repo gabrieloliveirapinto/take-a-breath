@@ -46,37 +46,43 @@ export default new Vuex.Store({
         description: "Animation 1 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        class: { "background-color-1": true }
+        backgroundClass: { "background-color-1": true },
+        descriptionClass: { "description-pos-1": true }
       },
       {
         description: "Animation 2 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        class: { "background-color-2": true }
+        backgroundClass: { "background-color-2": true },
+        descriptionClass: { "description-pos-2": true }
       },
       {
         description: "Animation 3 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        class: { "background-color-3": true }
+        backgroundClass: { "background-color-3": true },
+        descriptionClass: { "description-pos-3": true }
       },
       {
         description: "Animation 4 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        class: { "background-color-4": true }
+        backgroundClass: { "background-color-4": true },
+        descriptionClass: { "description-pos-4": true }
       },
       {
         description: "Animation 5 description",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-        class: { "background-color-5": true }
+        backgroundClass: { "background-color-5": true },
+        descriptionClass: { "description-pos-5": true }
       },
       {
         description: "Animation 6 description",
         animation:
           "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
-        class: { "background-color-6": true }
+        backgroundClass: { "background-color-6": true },
+        descriptionClass: { "description-pos-6": true }
       }
     ],
     selectedAnimations: [],
