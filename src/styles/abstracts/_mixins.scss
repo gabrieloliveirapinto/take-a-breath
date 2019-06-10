@@ -25,23 +25,23 @@
     left: 80px;
   }
   @if $num == 2 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 200px;
+    left: 80px;
   }
   @if $num == 3 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 500px;
+    right: 100px;
   }
   @if $num == 4 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 500px;
+    right: 100px;
   }
   @if $num == 5 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 500px;
+    left: 100px;
   }
   @if $num == 6 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 50px;
+    right: 100px;
   }
 }

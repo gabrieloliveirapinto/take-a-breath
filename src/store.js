@@ -52,7 +52,7 @@ export default new Vuex.Store({
         descriptionClass: { "description-pos-1": true }
       },
       {
-        description: "Animation 2 description",
+        description: "Inspire sempre que a bola chega ao canto esquerdo. Expire quando a bola chegar ao canto direito.",
         animation:
           // "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
           "<img src='/images/anim-placeholder-2.png'>",

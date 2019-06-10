@@ -26,7 +26,7 @@ export default {
       desc: "",
       animClass: {},
       desClass: {},
-      showDescripton: false
+      showDescripton: true
     };
   },
   computed: {
