@@ -48,6 +48,7 @@
     width: 450px;
     height: 450px;
     font-size: $description-font-size;
+    font-weight: lighter;
     @include descriptionPos($i);
   }
 }
