@@ -26,7 +26,8 @@ export default {
       desc: "",
       animClass: {},
       desClass: {},
-      showDescripton: true
+      showDescripton: true,
+      showTimeout: null
     };
   },
   computed: {
@@ -59,11 +60,12 @@ export default {
     },
     handleDescription() {
       this.showDescripton = true;
-      setTimeout(() => {
+      this.showTimeout = setTimeout(() => {
         this.showDescripton = false;
       }, 5000);
     },
     nextPage() {
+      clearTimeout(this.showTimeout);
       if (this.aninIndex < 2) {
         this.aninIndex++;
         this.getCurrentAnimation();
