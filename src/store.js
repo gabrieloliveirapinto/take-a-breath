@@ -43,7 +43,8 @@ export default new Vuex.Store({
     ],
     animations: [
       {
-        description: "Animation 1 description",
+        description:
+          "À medida que o cilindro é aperfeiçoado e o anel desce, deve chegar, lentamente e com o mesmo ritmo, à ponta dos pés com as suas mãos.",
         animation:
           "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
         sound: "./sounds/out-sound-1.mp3",
@@ -53,7 +54,8 @@ export default new Vuex.Store({
       {
         description: "Animation 2 description",
         animation:
-          "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          // "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          "<img src='/images/anim-placeholder-2.png'>",
         sound: "./sounds/out-sound-2.mp3",
         backgroundClass: { "background-color-2": true },
         descriptionClass: { "description-pos-2": true }
@@ -61,7 +63,8 @@ export default new Vuex.Store({
       {
         description: "Animation 3 description",
         animation:
-          "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+          // "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+          "<img src='/images/anim-placeholder-3.png'>",
         sound: "./sounds/out-sound-3.mp3",
         backgroundClass: { "background-color-3": true },
         descriptionClass: { "description-pos-3": true }
@@ -69,7 +72,8 @@ export default new Vuex.Store({
       {
         description: "Animation 4 description",
         animation:
-          "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          // "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          "<img src='/images/anim-placeholder-4.png'>",
         sound: "./sounds/in-sound-1.mp3",
         backgroundClass: { "background-color-4": true },
         descriptionClass: { "description-pos-4": true }

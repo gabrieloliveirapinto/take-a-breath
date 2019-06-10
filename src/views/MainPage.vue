@@ -3,7 +3,7 @@
   <div class="main-page" v-bind:class="this.animClass">
     <animation v-bind:anim="anim"/>
     <!-- TODO: add class to position description -- get from state anumations -->
-    <div v-bind:class="this.desClass">
+    <div v-bind:class="this.desClass" v-if="this.showDescripton">
       <p class="description__text">{{desc}}</p>
     </div>
     <i class="fas fa-arrow-right fa-3x animation-arrow" @click="nextPage()"></i>
@@ -13,6 +13,7 @@
 <script>
 import Animation from "@/components/Animation";
 import { mapMutations, mapState } from "vuex";
+import { setTimeout } from "timers";
 
 export default {
   components: {
@@ -24,7 +25,8 @@ export default {
       anim: "",
       desc: "",
       animClass: {},
-      desClass: {}
+      desClass: {},
+      showDescripton: false
     };
   },
   computed: {
@@ -33,6 +35,7 @@ export default {
   created() {
     this.gameAnimations();
     this.getCurrentAnimation();
+    this.handleDescription();
   },
   methods: {
     ...mapMutations(["gameAnimations", "setCurrentSound"]),
@@ -52,6 +55,13 @@ export default {
       this.setCurrentSound(
         this.animations[this.selectedAnimations[this.aninIndex]].sound
       );
+      this.handleDescription();
+    },
+    handleDescription() {
+      this.showDescripton = true;
+      setTimeout(() => {
+        this.showDescripton = false;
+      }, 5000);
     },
     nextPage() {
       if (this.aninIndex < 2) {

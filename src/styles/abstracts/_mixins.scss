@@ -1,6 +1,6 @@
 @mixin backgroundColor($num) {
   @if $num == 1 {
-    background-color: green;
+    background-color: #0b6725;
   }
   @if $num == 2 {
     background-color: pink;
@@ -21,8 +21,8 @@
 
 @mixin descriptionPos($num) {
   @if $num == 1 {
-    top: $num * 10px;
-    left: $num * 10px;
+    top: 100px;
+    left: 80px;
   }
   @if $num == 2 {
     top: $num * 10px;
