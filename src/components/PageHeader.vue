@@ -79,7 +79,9 @@ export default {
       this.audio.loop = true;
       this.audio.preload = "auto";
       this.audio.load();
-      this.audio.play();
+      if (this.soundON) {
+        this.audio.play();
+      }
     }
   },
   watch: {

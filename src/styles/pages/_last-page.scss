@@ -28,4 +28,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  .btn {
+    font-weight: lighter;
+    color: $primary-color;
+
+    &:hover {
+      color: $last-page-btn-hover-color;
+    }
+  }
 }

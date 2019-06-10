@@ -1,5 +1,29 @@
 .btn-list {
+  padding: 24px 40px;
   display: grid;
   grid-auto-rows: max-content;
   grid-gap: 24px;
+}
+
+.btn-list--symptoms {
+  .btn {
+    font-weight: lighter;
+    text-align: left;
+
+    &:hover {
+      color: $symptoms-btn-hover-color;
+    }
+  }
+}
+
+.btn-list--places {
+  align-self: flex-end;
+  .btn {
+    font-weight: lighter;
+    text-align: right;
+
+    &:hover {
+      color: $places-btn-hover-color;
+    }
+  }
 }

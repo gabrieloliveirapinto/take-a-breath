@@ -29,4 +29,9 @@
 .home__btn {
   grid-area: btn;
   align-self: start;
+  color: $base-color;
+
+  &:hover {
+    color: $home-btn-hover-color;
+  }
 }

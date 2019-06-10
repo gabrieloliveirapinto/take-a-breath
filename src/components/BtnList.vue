@@ -1,5 +1,8 @@
 <template>
-  <div class="btn-list">
+  <div
+    class="btn-list"
+    v-bind:class="{'btn-list--symptoms': listSymptoms, 'btn-list--places': listPlaces}"
+  >
     <div
       class="btn"
       v-for="btn in btns"
@@ -16,6 +19,20 @@ export default {
   props: {
     btns: Array,
     section: String
+  },
+  data() {
+    return {
+      listSymptoms: false,
+      listPlaces: false
+    };
+  },
+  created() {
+    if (this.section === "symptoms") {
+      this.listSymptoms = true;
+    }
+    if (this.section === "places") {
+      this.listPlaces = true;
+    }
   },
   methods: {
     ...mapMutations(["selectPlace", "selectSymptom"]),
