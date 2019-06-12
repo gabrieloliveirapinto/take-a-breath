@@ -53,10 +53,9 @@ export default new Vuex.Store({
       },
       {
         description:
-          "Inspire sempre que a bola chega ao canto esquerdo. Expire quando a bola chegar ao canto direito.",
+          "Quando a bola passar o arco para o lado esquerdo, inspire e estique o braço para o lado direito. Quando passar para o lado direito, expire e estique o braço para o lado esquerdo.",
         animation:
-          // "<video preload autoplay loop><source src='/anims/anim2.mp4' type='video/mp4'></video>",
-          "<img src='/images/anim-placeholder-2.png'>",
+          "<video preload autoplay loop><source src='/anims/anim2.mp4' type='video/mp4'></video>",
         sound: "./sounds/out-sound-2.mp3",
         backgroundClass: { "background-color-2": true },
         descriptionClass: { "description-pos-2": true }
@@ -71,10 +70,10 @@ export default new Vuex.Store({
         descriptionClass: { "description-pos-3": true }
       },
       {
-        description: "Animation 4 description",
+        description:
+          "Quando a bola cair e o balão descer, coloque as duas mãos atrás das costas, com postura direita enquanto expira. Quando o balão estiver a subir novamente, levante os braços a acompanhá-lo e inspire.",
         animation:
-          // "<video preload autoplay loop><source src='/anims/anim4.mp4' type='video/mp4'></video>",
-          "<img src='/images/anim-placeholder-4.png'>",
+          "<video preload autoplay loop><source src='/anims/anim4.mp4' type='video/mp4'></video>",
         sound: "./sounds/in-sound-1.mp3",
         backgroundClass: { "background-color-4": true },
         descriptionClass: { "description-pos-4": true }
@@ -89,10 +88,10 @@ export default new Vuex.Store({
         descriptionClass: { "description-pos-5": true }
       },
       {
-        description: "Animation 6 description",
+        description:
+          "Inspire quando a bola verde crescer, expire quando crescer a bola azul.",
         animation:
-          // "<video preload autoplay loop><source src='/anims/anim6.mp4' type='video/mp4'></video>",
-          "<img src='/images/anim-placeholder-3.png'>",
+          "<video preload autoplay loop><source src='/anims/anim6.mp4' type='video/mp4'></video>",
         sound: "./sounds/in-sound-3.mp3",
         backgroundClass: { "background-color-6": true },
         descriptionClass: { "description-pos-6": true }
