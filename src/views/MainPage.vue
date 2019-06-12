@@ -62,7 +62,7 @@ export default {
       this.showDescripton = true;
       this.showTimeout = setTimeout(() => {
         this.showDescripton = false;
-      }, 5000);
+      }, 10000);
     },
     nextPage() {
       clearTimeout(this.showTimeout);

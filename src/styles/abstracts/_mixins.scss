@@ -1,21 +1,28 @@
 @mixin backgroundColor($num) {
   @if $num == 1 {
-    background-color: #0b6725;
+    background-color: #187140;
   }
   @if $num == 2 {
-    background-color: pink;
+    background-color: #f197c0;
   }
   @if $num == 3 {
-    background-color: green;
+    background-color: #d42765;
   }
   @if $num == 4 {
-    background-color: pink;
+    background-color: #d7db2d;
   }
   @if $num == 5 {
-    background-color: green;
+    background-color: #44b4e6;
   }
   @if $num == 6 {
-    background-color: pink;
+    background: linear-gradient(
+      to right,
+      #0d6838 0%,
+      #0d6838 50%,
+      #0d6838 50%,
+      #6cc6d9 50%,
+      #6cc6d9 100%
+    );
   }
 }
 
@@ -29,7 +36,7 @@
     left: 80px;
   }
   @if $num == 3 {
-    top: 500px;
+    top: 400px;
     right: 100px;
   }
   @if $num == 4 {
@@ -37,7 +44,7 @@
     right: 100px;
   }
   @if $num == 5 {
-    top: 500px;
+    top: 100px;
     left: 100px;
   }
   @if $num == 6 {

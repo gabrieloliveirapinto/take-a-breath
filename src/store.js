@@ -44,27 +44,28 @@ export default new Vuex.Store({
     animations: [
       {
         description:
-          "À medida que o cilindro é aperfeiçoado e o anel desce, deve chegar, lentamente e com o mesmo ritmo, à ponta dos pés com as suas mãos.",
+          "Alongue o corpo! Tente chegar com as pontas dos dedos das mãos, às pontas dos dedos dos pés quando enquanto o anel desce o cilindro verde. Fazer o movimento inverso quando o anel sobe o cilindro. ",
         animation:
-          "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+          "<video preload autoplay loop><source src='/anims/anim1.mp4' type='video/mp4'></video>",
         sound: "./sounds/out-sound-1.mp3",
         backgroundClass: { "background-color-1": true },
         descriptionClass: { "description-pos-1": true }
       },
       {
-        description: "Inspire sempre que a bola chega ao canto esquerdo. Expire quando a bola chegar ao canto direito.",
+        description:
+          "Inspire sempre que a bola chega ao canto esquerdo. Expire quando a bola chegar ao canto direito.",
         animation:
-          // "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          // "<video preload autoplay loop><source src='/anims/anim2.mp4' type='video/mp4'></video>",
           "<img src='/images/anim-placeholder-2.png'>",
         sound: "./sounds/out-sound-2.mp3",
         backgroundClass: { "background-color-2": true },
         descriptionClass: { "description-pos-2": true }
       },
       {
-        description: "Animation 3 description",
+        description:
+          "Inspire à medida que as figuras geométricas vão surgindo no ecrã. Expire à medida que estas forem desaparecendo.",
         animation:
-          // "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
-          "<img src='/images/anim-placeholder-3.png'>",
+          "<video preload autoplay loop><source src='/anims/anim3.mp4' type='video/mp4'></video>",
         sound: "./sounds/out-sound-3.mp3",
         backgroundClass: { "background-color-3": true },
         descriptionClass: { "description-pos-3": true }
@@ -72,16 +73,17 @@ export default new Vuex.Store({
       {
         description: "Animation 4 description",
         animation:
-          // "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          // "<video preload autoplay loop><source src='/anims/anim4.mp4' type='video/mp4'></video>",
           "<img src='/images/anim-placeholder-4.png'>",
         sound: "./sounds/in-sound-1.mp3",
         backgroundClass: { "background-color-4": true },
         descriptionClass: { "description-pos-4": true }
       },
       {
-        description: "Animation 5 description",
+        description:
+          "Estique o braço esquerdo no sentido dos ponteiros do relógio, à medida que os retângulos vermelhos vão subindo no ecrã. Faça o movimento oposto com o braço direito, à medida que estes descerem no ecrã.",
         animation:
-          "<img dynsrc='/images/animacao1.gif' src='/images/animacao1.gif'>",
+          "<video preload autoplay loop><source src='/anims/anim5.mp4' type='video/mp4'></video>",
         sound: "./sounds/in-sound-2.mp3",
         backgroundClass: { "background-color-5": true },
         descriptionClass: { "description-pos-5": true }
@@ -89,7 +91,8 @@ export default new Vuex.Store({
       {
         description: "Animation 6 description",
         animation:
-          "<video autoplay loop><source src = '/images/bola_Prancheta_1_copia 2_1.mp4' type = 'video/mp4'></video>",
+          // "<video preload autoplay loop><source src='/anims/anim6.mp4' type='video/mp4'></video>",
+          "<img src='/images/anim-placeholder-3.png'>",
         sound: "./sounds/in-sound-3.mp3",
         backgroundClass: { "background-color-6": true },
         descriptionClass: { "description-pos-6": true }
